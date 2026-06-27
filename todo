@@ -1,0 +1,11 @@
+If you're building a VPN as a learning project, I'd recommend implementing it in this order:
+
+✅ Create a TUN interface.
+✅ Read and write packets.
+Add UDP transport between two machines.
+Forward packets without encryption (to prove the tunnel works).
+Add encryption.
+Add authentication.
+Add sequence numbers (replay protection).
+Add key exchange.
+Add keepalives and MTU handling.

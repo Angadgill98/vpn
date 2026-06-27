@@ -1,0 +1,8 @@
+| Type         | What you get    | Think of it as       | Used for            |
+| ------------ | --------------- | -------------------- | ------------------- |
+| **TUN**      | IP packets      | Virtual router port  | VPNs                |
+| **TAP**      | Ethernet frames | Virtual network card | VMs / bridges       |
+| **veth**     | Ethernet frames | Virtual cable        | Docker / namespaces |
+| **bridge**   | Switch logic    | Network switch       | LAN connecting      |
+| **dummy**    | Nothing real    | Fake NIC             | testing             |
+| **loopback** | Local packets   | “Inside your PC”     | localhost           |

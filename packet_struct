@@ -1,0 +1,24 @@
+get hte packet '
+the first bit of th packet has teh ip protocol and the header lentgh
+
+the first half of bits is protocol adn sencond half is the length fo the headers
+
+
+first half -protocol
+second half-internet header length\
+
+
+
+now we get the transport protocol
+that is fixed so we can jsut theh protocol that is being used
+
+but now we need to determine wher the transport header starts 
+as htat ocntainer the packet information wher it shead ed and destionantion 
+
+this is determined by going to the end of the ihl 
+if ihl=5
+here ihl is 32 bit not 8 bit liek the previos 
+so in a 8 bit array we need to  find where ihl end 
+so if i ihl unit is like 32 bits  so in a 8 bit array  it would be like 4byte
+and ihl was previously 5 so 5x4=20 byte so inth 8 bit array the ihl end at the 20 byte 
+after this we can know which transport protocol was used 
