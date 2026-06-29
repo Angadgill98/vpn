@@ -40,7 +40,7 @@ fn CLI_controller(){
     println!("Starting CLI vpn");
     let mut choice=String::new();
     let mut interfaces_array:Vec<interface>=Vec::new();
-
+    
     let mut input:String=String::new();
     loop {
         CLI_printer();
@@ -86,6 +86,18 @@ fn CLI_controller(){
             "8"=>ShowIProute(),
             "9"=>ShowRules(),
             "10"=>RemoveRule(),
+
+
+            "11"=>{match ReadPacket(&mut interfaces_array[0].device) {
+                    Ok(w)=>{
+
+                    },
+                    Err(e)=>{
+
+                    }
+                }
+                
+            }
             _=>println!("invalid")
         }
         
@@ -109,6 +121,9 @@ fn CLI_printer(){
     println!("9-Show rules");
     println!("10-Remove rule for interface");
 
+    println!("\n");
+
+    println!("11-Read the packet");
 }
 
 
